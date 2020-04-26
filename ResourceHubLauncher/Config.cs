@@ -12,7 +12,7 @@ namespace ResourceHubLauncher
     class Config
     {
         public static JObject Options = new JObject();
-        private static string configPath = Path.Combine(Path.GetTempPath(), "..", "ResourceHub Launcher");
+        private static string configPath = Path.Combine(Path.GetTempPath(), "..", "MeadowLand Launcher");
         public static string configFile = Path.Combine(configPath, "config.json");
 
         public static void Defaults() {
@@ -29,13 +29,13 @@ namespace ResourceHubLauncher
 
         public static string getModPath() {
             if ((string)Options["gpath"] == "") {
-                MetroMessageBox.Show(new MainForm(), "Please set the Goose path in the Settings.", "Error 404: Goose not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(new MainForm(), "Please set the Meadow path in the Settings.", "Error 404: Meadow not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
                 if (File.Exists((string)Options["gpath"])) {
                     return Path.GetDirectoryName((string)Options["gpath"]);
                 } else {
-                    MetroMessageBox.Show(new MainForm(), "The goose path you have set seems to be outdated.\r\n" +
-                           "Please set the Goose path in the Settings.", "Error 404: Goose not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(new MainForm(), "The Meadow path you have set seems to be outdated.\r\n" +
+                           "Please set the Meadow path in the Settings.", "Error 404: Meadow not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return "";

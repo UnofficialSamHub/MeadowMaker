@@ -185,11 +185,6 @@ namespace ResourceHubLauncher
 
             pictureBox2.Image = Properties.Resources.RHLTSmall;
 
-
-            if (Process.GetProcessesByName("GooseDesktop").Count() > 0) {
-                gooseToolStripMenuItem.Text = "Geese";
-            }
-
             
             htmlTags.Apply(ref label3);
             //loadingPanel.Hide();
@@ -873,7 +868,7 @@ namespace ResourceHubLauncher
         }
 
         private void metroButton4_Click(object sender, EventArgs e) {
-            foreach (Process p in Process.GetProcessesByName("GooseDesktop")) p.Kill();
+            foreach (Process p in Process.GetProcessesByName("DesktopMeadow")) p.Kill();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e) {
@@ -981,17 +976,14 @@ namespace ResourceHubLauncher
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e) {
-            gooseToolStripMenuItem.Text = "Geese";
             Process.Start(Path.Combine(Config.getModPath(), Path.GetFileName((string)Config.Options["gpath"])));
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e) {
-            foreach (Process p in Process.GetProcessesByName("GooseDesktop")) {
+            foreach (Process p in Process.GetProcessesByName("DesktopMeadow")) {
                 p.Kill();
                 p.WaitForExit();
             }
-
-            gooseToolStripMenuItem.Text = "Goose";
         }
 
         private void disableToolStripMenuItem_Click(object sender, EventArgs e) {

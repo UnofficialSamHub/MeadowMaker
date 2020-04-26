@@ -188,7 +188,6 @@
             this.availableToolStripMenuItem});
             this.ShowedModsMenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.ShowedModsMenuStrip.Name = "modListContextMenu";
-            this.ShowedModsMenuStrip.OwnerItem = this.showModsToolStripMenuItem;
             this.ShowedModsMenuStrip.ShowImageMargin = false;
             this.ShowedModsMenuStrip.Size = new System.Drawing.Size(163, 70);
             this.ShowedModsMenuStrip.Closing += new System.Windows.Forms.ToolStripDropDownClosingEventHandler(this.ShowedModsMenuStrip_Closing);
@@ -268,7 +267,6 @@
             this.futureOfTheLauncherToolStripMenuItem});
             this.linksContextMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.linksContextMenu.Name = "modListContextMenu";
-            this.linksContextMenu.OwnerItem = this.toolStripMenuItem8;
             this.linksContextMenu.ShowImageMargin = false;
             this.linksContextMenu.Size = new System.Drawing.Size(153, 92);
             // 
@@ -361,7 +359,6 @@
             this.toolStripMenuItem3});
             this.UtilitiesContextMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.UtilitiesContextMenu.Name = "modListContextMenu";
-            this.UtilitiesContextMenu.OwnerItem = this.gooseToolStripMenuItem;
             this.UtilitiesContextMenu.ShowImageMargin = false;
             this.UtilitiesContextMenu.Size = new System.Drawing.Size(74, 48);
             // 
@@ -388,7 +385,7 @@
             this.gooseToolStripMenuItem.DropDown = this.UtilitiesContextMenu;
             this.gooseToolStripMenuItem.Name = "gooseToolStripMenuItem";
             this.gooseToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.gooseToolStripMenuItem.Text = "Goose";
+            this.gooseToolStripMenuItem.Text = "Meadow";
             // 
             // OptionsContextMenu
             // 
@@ -547,7 +544,6 @@
             this.bigSizeToolStripMenuItem});
             this.TextSizeMenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.TextSizeMenuStrip.Name = "modListContextMenu";
-            this.TextSizeMenuStrip.OwnerItem = this.ActualTextSizeButton;
             this.TextSizeMenuStrip.ShowImageMargin = false;
             this.TextSizeMenuStrip.Size = new System.Drawing.Size(118, 70);
             // 

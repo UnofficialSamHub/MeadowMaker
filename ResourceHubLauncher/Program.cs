@@ -119,11 +119,11 @@ namespace ResourceHubLauncher
                         Clipboard.SetText(md5.ToString());
 
                     if ((string)Config.Options["gpath"] == "" || !File.Exists((string)Config.Options["gpath"])) {
-                        if (MetroMessageBox.Show(form, "To start using the Launcher, you need to select the GooseDesktop.exe file. Press OK to do so now.", "Is it your first time using the Launcher?", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK) {
+                        if (MetroMessageBox.Show(form, "To start using the Launcher, you need to select the DesktopMeadow.exe file. Press OK to do so now.", "Is it your first time using the Launcher?", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK) {
                             using (OpenFileDialog oFileDialog = new OpenFileDialog()) {
                                 oFileDialog.InitialDirectory = @"C:\";
-                                oFileDialog.Filter = "GooseDesktop.exe|GooseDesktop.exe";
-                                oFileDialog.Title = "Select GooseDesktop.exe";
+                                oFileDialog.Filter = "DesktopMeadow.exe|DesktopMeadow.exe";
+                                oFileDialog.Title = "Select DesktopMeadow.exe";
 
                                 oFileDialog.FileOk += (object sender, CancelEventArgs e) => {
                                     if (e.Cancel) { return; }
@@ -131,32 +131,6 @@ namespace ResourceHubLauncher
                                 };
                                 oFileDialog.ShowDialog();
                             }
-                            form.Focus();
-                        }
-                    }
-                    string[] parts;
-                    bool newConfigIni = false;
-                    string configPath = Path.Combine(Path.GetDirectoryName((string)Config.Options["gpath"]), "config.ini");
-                    using (StreamReader rrrr = new StreamReader(configPath)) {
-                        parts = rrrr.ReadToEnd().Split('\n');
-                        int partIndex = parts.ToList().FindIndex((line) => { return line.StartsWith("EnableMods"); });
-                        if (parts[partIndex].Substring(11).ToLower() == "false") {
-                            Console.WriteLine($"User has mods disabled. Asking if they want to enable...");
-                            if (MetroMessageBox.Show(form, "Do you want to enable them?", "Your config.ini file says that mods should be disabled.", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
-                                parts[partIndex] = parts[partIndex].Replace("False", "True");
-                                newConfigIni = true;
-                                form.Focus();
-                            }
-                        }
-                    }
-                    if (newConfigIni) {
-                        using (StreamWriter wwww = new StreamWriter(configPath)) {
-                            wwww.Flush();
-                            string all = "";
-                            foreach (string sss in parts) {
-                                all += sss + '\n';
-                            }
-                            wwww.Write(all);
                             form.Focus();
                         }
                     }
