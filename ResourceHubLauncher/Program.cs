@@ -177,18 +177,18 @@ namespace ResourceHubLauncher
 
             if (!_G.dev) ShowWindow(handle, SW_HIDE);
 
-            Console.WriteLine("RESOURCEHUB LAUNCHER\nStarted!\n\n");
+            Console.WriteLine("MEADOWLAND LAUNCHER\nStarted!\n\n");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             Loading loading = new Loading();
 
-            Console.Title = "ResourceHub Launcher // Developer Console";
+            Console.Title = "MeadowLand Launcher // Developer Console";
             Console.WriteLine("Checking internet connection...");
             if (!CheckForInternetConnection()) {
                 Console.WriteLine("Didn't find any internet connection.");
-                if (MessageBox.Show("Hmm... It doesn't look like you have any internet connection.\nThe ResourceHub Launcher cannot function properly without any internet connection.\nPlease try again when you do get an internet connection though!", "(☓‿‿☓)", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) {
+                if (MessageBox.Show("Hmm... It doesn't look like you have any internet connection.\nThe MeadowLand Launcher cannot function properly without any internet connection.\nPlease try again when you do get an internet connection though!", "(☓‿‿☓)", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) {
                     return;
                 }
             }

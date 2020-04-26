@@ -344,7 +344,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.IntegralHeight = false;
             this.listBox1.Location = new System.Drawing.Point(198, 76);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(514, 390);
             this.listBox1.TabIndex = 29;
@@ -446,7 +446,7 @@
             this.changelogRichTextBox.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.changelogRichTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.changelogRichTextBox.Location = new System.Drawing.Point(0, 0);
-            this.changelogRichTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.changelogRichTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.changelogRichTextBox.Name = "changelogRichTextBox";
             this.changelogRichTextBox.ReadOnly = true;
             this.changelogRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -666,7 +666,7 @@
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 6;
             this.metroPanel2.Location = new System.Drawing.Point(15, 76);
-            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(184, 390);
             this.metroPanel2.TabIndex = 33;
@@ -686,7 +686,7 @@
             this.resizingPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.resizingPanel.HorizontalScrollbarSize = 8;
             this.resizingPanel.Location = new System.Drawing.Point(15, 76);
-            this.resizingPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resizingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.resizingPanel.Name = "resizingPanel";
             this.resizingPanel.Size = new System.Drawing.Size(179, 390);
             this.resizingPanel.TabIndex = 35;
@@ -719,7 +719,7 @@
             this.DownloadPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.DownloadPanel.HorizontalScrollbarSize = 8;
             this.DownloadPanel.Location = new System.Drawing.Point(176, 436);
-            this.DownloadPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DownloadPanel.Margin = new System.Windows.Forms.Padding(2);
             this.DownloadPanel.Name = "DownloadPanel";
             this.DownloadPanel.Size = new System.Drawing.Size(376, 48);
             this.DownloadPanel.TabIndex = 36;
@@ -732,8 +732,8 @@
             // OptionsButton
             // 
             this.OptionsButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.OptionsButton.Location = new System.Drawing.Point(215, 20);
-            this.OptionsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OptionsButton.Location = new System.Drawing.Point(272, 20);
+            this.OptionsButton.Margin = new System.Windows.Forms.Padding(2);
             this.OptionsButton.Name = "OptionsButton";
             this.OptionsButton.Size = new System.Drawing.Size(70, 33);
             this.OptionsButton.TabIndex = 38;
@@ -753,7 +753,7 @@
             this.changelogPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.changelogPanel.HorizontalScrollbarSize = 8;
             this.changelogPanel.Location = new System.Drawing.Point(-716, -463);
-            this.changelogPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.changelogPanel.Margin = new System.Windows.Forms.Padding(2);
             this.changelogPanel.Name = "changelogPanel";
             this.changelogPanel.Size = new System.Drawing.Size(728, 484);
             this.changelogPanel.TabIndex = 39;
@@ -788,7 +788,7 @@
             this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel4.HorizontalScrollbarSize = 8;
             this.metroPanel4.Location = new System.Drawing.Point(56, 57);
-            this.metroPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel4.Name = "metroPanel4";
             this.metroPanel4.Size = new System.Drawing.Size(616, 367);
             this.metroPanel4.TabIndex = 2;
@@ -819,7 +819,7 @@
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel5.HorizontalScrollbarSize = 8;
             this.metroPanel5.Location = new System.Drawing.Point(0, 37);
-            this.metroPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel5.Name = "metroPanel5";
             this.metroPanel5.Size = new System.Drawing.Size(612, 325);
             this.metroPanel5.TabIndex = 4;
@@ -832,8 +832,8 @@
             // descriptionButton
             // 
             this.descriptionButton.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.descriptionButton.Location = new System.Drawing.Point(301, 20);
-            this.descriptionButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descriptionButton.Location = new System.Drawing.Point(346, 20);
+            this.descriptionButton.Margin = new System.Windows.Forms.Padding(2);
             this.descriptionButton.Name = "descriptionButton";
             this.descriptionButton.Size = new System.Drawing.Size(128, 33);
             this.descriptionButton.TabIndex = 41;
@@ -864,11 +864,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.resizingPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(728, 484);
             this.Name = "MainForm";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
-            this.Text = "MeadowLauncher";
+            this.Text = "MeadowLand Launcher";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.Ivory;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);

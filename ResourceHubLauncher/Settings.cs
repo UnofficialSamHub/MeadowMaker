@@ -113,7 +113,7 @@ namespace ResourceHubLauncher {
             Config.Save();
         }
 
-        private DialogResult MsgBox(object text, string title = "ResourceHub Launcher", MessageBoxButtons buttons = MessageBoxButtons.OK, MessageBoxIcon icon = MessageBoxIcon.Information, MessageBoxDefaultButton defaultButton = MessageBoxDefaultButton.Button1) {
+        private DialogResult MsgBox(object text, string title = "MeadowLand Launcher", MessageBoxButtons buttons = MessageBoxButtons.OK, MessageBoxIcon icon = MessageBoxIcon.Information, MessageBoxDefaultButton defaultButton = MessageBoxDefaultButton.Button1) {
             return MetroMessageBox.Show(this, text.ToString(), title, buttons, icon, defaultButton);
         }
 
