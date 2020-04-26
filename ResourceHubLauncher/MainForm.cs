@@ -955,14 +955,14 @@ namespace ResourceHubLauncher
         }
 
         private void discordToolStripMenuItem_Click_1(object sender, EventArgs e) {
-            if (MsgBox("This will open a link to the ResourceHub Discord server. Do you want to proceed?", "Hold up!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
-                Process.Start("https://discock.gg/rhl");
+            if (MsgBox("This will open a link to the MeadowLand Discord server. Do you want to proceed?", "Hold up!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
+                Process.Start("https://discord.gg/K9cwDGJ");
             }
         }
 
         private void githubToolStripMenuItem_Click_1(object sender, EventArgs e) {
             if (MsgBox("This will open a link to our GitHub repo. Do you want to proceed?", "Hold up!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
-                Process.Start("https://github.com/DesktopGooseUnofficial/launcher");
+                Process.Start("https://github.com/UnofficialSamHub/MeadowLauncher/");
             }
         }
         private void twitterToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -1020,19 +1020,19 @@ namespace ResourceHubLauncher
 
         private void futureOfTheLauncherToolStripMenuItem_Click(object sender, EventArgs e) {
             if (MsgBox("This will open a link to the list of upcoming features. Do you want to proceed?", "Hold up!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
-                Process.Start("https://github.com/DesktopGooseUnofficial/launcher/milestones");
+                Process.Start("https://github.com/UnofficialSamHub/MeadowLauncher/milestones");
             }
         }
 
         private void giveUsFeedbackToolStripMenuItem_Click(object sender, EventArgs e) {
             if (MsgBox("This will open a link where you can send us feedback. A GitHub account is required. Do you want to proceed?", "Before you send feedback...", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
-                Process.Start("https://github.com/DesktopGooseUnofficial/launcher/issues/new/choose");
+                Process.Start("https://github.com/UnofficialSamHub/MeadowLauncher/issues/new/choose");
             }
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e) {
             if (MsgBox("This will open a link where you will be taken to the README for the Launcher. Do you want to proceed?", "Hold up!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
-                Process.Start("https://github.com/DesktopGooseUnofficial/launcher#readme");
+                Process.Start("https://github.com/UnofficialSamHub/MeadowLauncher#readme");
             }
         }
 

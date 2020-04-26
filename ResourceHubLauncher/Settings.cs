@@ -119,7 +119,7 @@ namespace ResourceHubLauncher {
 
         private void metroButton1_Click_1(object sender, EventArgs e) {
             if (MsgBox("This will open a GitHub link to our Contributors. Do you want to proceed?", "Hold up!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) {
-                Process.Start("https://github.com/DesktopGooseUnofficial/launcher/graphs/contributors");
+                Process.Start("https://github.com/UnofficialSamHub/MeadowLauncher/graphs/contributors");
             }
         }
 
