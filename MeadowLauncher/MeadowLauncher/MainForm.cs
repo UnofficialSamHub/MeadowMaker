@@ -13,5 +13,10 @@ namespace MeadowLauncher {
         public MainForm() {
             InitializeComponent();
         }
+
+        private void InstallBtn_Click(object sender, EventArgs e) {
+            MessageBox.Show("This button does not currently have any function.", "Functionality unavailable",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
