@@ -122,7 +122,7 @@
             this.modListContextMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.modListContextMenu.Name = "modListContextMenu";
             this.modListContextMenu.ShowImageMargin = false;
-            this.modListContextMenu.Size = new System.Drawing.Size(131, 142);
+            this.modListContextMenu.Size = new System.Drawing.Size(156, 164);
             this.modListContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.modListContextMenu_Opening);
             // 
             // installToolStripMenuItem
@@ -151,8 +151,8 @@
             // resourceHubToolStripMenuItem
             // 
             this.resourceHubToolStripMenuItem.Name = "resourceHubToolStripMenuItem";
-            this.resourceHubToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.resourceHubToolStripMenuItem.Text = "ResourceHub";
+            this.resourceHubToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.resourceHubToolStripMenuItem.Text = "MeadowHub";
             this.resourceHubToolStripMenuItem.Click += new System.EventHandler(this.resourceHubToolStripMenuItem_Click);
             // 
             // openInModsToolStripMenuItem1
@@ -173,7 +173,7 @@
             // 
             this.showModsToolStripMenuItem.DropDown = this.ShowedModsMenuStrip;
             this.showModsToolStripMenuItem.Name = "showModsToolStripMenuItem";
-            this.showModsToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.showModsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.showModsToolStripMenuItem.Text = "Show Mods...";
             // 
             // ShowedModsMenuStrip

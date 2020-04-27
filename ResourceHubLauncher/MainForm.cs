@@ -330,7 +330,7 @@ namespace ResourceHubLauncher
                 installToolStripMenuItem.Enabled = true;
             }
             if(mod!=null) {
-                if ((string)mod["resourcehub"] != null) {
+                if ((string)mod["meadowland"] != null) {
                     resourceHubToolStripMenuItem.Enabled = true;
                 } else {
                     resourceHubToolStripMenuItem.Enabled = false;
@@ -825,7 +825,7 @@ namespace ResourceHubLauncher
 
         private void resourceHubToolStripMenuItem_Click(object sender, EventArgs e) {
             try {
-                Process.Start(mod["resourcehub"].ToString());
+                Process.Start(mod["meadowland"].ToString());
             } catch (Exception) {
                 MsgBox("The link for this mod is not available or invalid.", "Page opening error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
