@@ -19,7 +19,7 @@ namespace MeadowLandLauncher {
                 this.Hide();
                 new MainForm().Show();
             } else {
-                label1.Text = "Sorry, but that's an incorrect code! Nice try... :)";
+                label1.Text = "Sneaky of ya! Maybe try joining the SHFP first or stop trying to be level 100 h$ack3r ;).";
             }
         }
     }

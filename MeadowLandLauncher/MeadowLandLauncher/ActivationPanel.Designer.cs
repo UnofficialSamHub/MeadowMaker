@@ -41,14 +41,14 @@
             // 
             this.ActivationBox.Location = new System.Drawing.Point(12, 32);
             this.ActivationBox.Name = "ActivationBox";
-            this.ActivationBox.Size = new System.Drawing.Size(244, 20);
+            this.ActivationBox.Size = new System.Drawing.Size(421, 20);
             this.ActivationBox.TabIndex = 1;
             // 
             // actBtn
             // 
-            this.actBtn.Location = new System.Drawing.Point(93, 58);
+            this.actBtn.Location = new System.Drawing.Point(12, 58);
             this.actBtn.Name = "actBtn";
-            this.actBtn.Size = new System.Drawing.Size(75, 23);
+            this.actBtn.Size = new System.Drawing.Size(421, 23);
             this.actBtn.TabIndex = 3;
             this.actBtn.Text = "Activate!";
             this.actBtn.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 88);
+            this.ClientSize = new System.Drawing.Size(445, 88);
             this.Controls.Add(this.actBtn);
             this.Controls.Add(this.ActivationBox);
             this.Controls.Add(this.label1);
