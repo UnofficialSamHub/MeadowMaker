@@ -23,7 +23,7 @@ namespace MeadowLandLauncher {
         }
 
         private void StationaryButton_Click(object sender, EventArgs e) {
-            StationaryDialog.ShowDialog();
+            StationeryDialog.ShowDialog();
         }
 
         private void FontButton_Click(object sender, EventArgs e) {
@@ -35,7 +35,7 @@ namespace MeadowLandLauncher {
         }
 
         private void StationaryDialog_FileOk(object sender, CancelEventArgs e) {
-            StationaryBox.Text = StationaryDialog.FileName;
+            StationeryBox.Text = StationeryDialog.FileName;
         }
 
         private void FontDialog_FileOk(object sender, CancelEventArgs e) {
@@ -43,7 +43,7 @@ namespace MeadowLandLauncher {
         }
 
         private void generateButton_Click(object sender, EventArgs e) {
-            if(FontBox.Text=="" || StationaryBox.Text == "" || FontBox.Text == "" || FontNameBox.Text == "" || PackNameBox.Text == "") {
+            if(FontBox.Text=="" || StationeryBox.Text == "" || FontBox.Text == "" || FontNameBox.Text == "" || PackNameBox.Text == "") {
                 MessageBox.Show("One or more required fields are empty. :(", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -60,7 +60,7 @@ namespace MeadowLandLauncher {
                     new JProperty("pack",
                         new JObject(
                             new JProperty("spritesheetFilename", SpriteSheetDialog.SafeFileName),
-                            new JProperty("formsStationeryImageFilename", StationaryDialog.SafeFileName),
+                            new JProperty("formsStationeryImageFilename", StationeryDialog.SafeFileName),
                             new JProperty("formsLetterFontFilename", FontDialog.SafeFileName),
                             new JProperty("formsLetterFontFamilyName", FontNameBox.Text))));
 
@@ -68,7 +68,7 @@ namespace MeadowLandLauncher {
 
             using(ZipArchive archive = ZipFile.Open(mllappdata + packzippath, ZipArchiveMode.Update)) {
                 archive.CreateEntryFromFile(SpriteSheetDialog.FileName, SpriteSheetDialog.SafeFileName);
-                archive.CreateEntryFromFile(StationaryDialog.FileName, StationaryDialog.SafeFileName);
+                archive.CreateEntryFromFile(StationeryDialog.FileName, StationeryDialog.SafeFileName);
                 archive.CreateEntryFromFile(FontDialog.FileName, FontDialog.SafeFileName);
                 archive.CreateEntryFromFile($"{mllappdata}/temp.json", "packinfo.json");
             }

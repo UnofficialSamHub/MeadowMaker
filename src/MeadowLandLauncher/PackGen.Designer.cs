@@ -25,14 +25,14 @@
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.SpriteSheetBox = new System.Windows.Forms.TextBox();
-            this.StationaryBox = new System.Windows.Forms.TextBox();
+            this.StationeryBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.FontBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.FontNameBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SpriteSheetDialog = new System.Windows.Forms.OpenFileDialog();
-            this.StationaryDialog = new System.Windows.Forms.OpenFileDialog();
+            this.StationeryDialog = new System.Windows.Forms.OpenFileDialog();
             this.FontDialog = new System.Windows.Forms.OpenFileDialog();
             this.SpriteSheetButton = new System.Windows.Forms.Button();
             this.StationaryButton = new System.Windows.Forms.Button();
@@ -61,13 +61,13 @@
             this.SpriteSheetBox.Size = new System.Drawing.Size(748, 20);
             this.SpriteSheetBox.TabIndex = 1;
             // 
-            // StationaryBox
+            // StationeryBox
             // 
-            this.StationaryBox.Location = new System.Drawing.Point(7, 72);
-            this.StationaryBox.Name = "StationaryBox";
-            this.StationaryBox.ReadOnly = true;
-            this.StationaryBox.Size = new System.Drawing.Size(748, 20);
-            this.StationaryBox.TabIndex = 3;
+            this.StationeryBox.Location = new System.Drawing.Point(7, 72);
+            this.StationeryBox.Name = "StationeryBox";
+            this.StationeryBox.ReadOnly = true;
+            this.StationeryBox.Size = new System.Drawing.Size(748, 20);
+            this.StationeryBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -76,7 +76,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Stationary";
+            this.label2.Text = "Stationery";
             // 
             // FontBox
             // 
@@ -116,10 +116,10 @@
             this.SpriteSheetDialog.FileName = "openFileDialog1";
             this.SpriteSheetDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.SpriteSheetDialog_FileOk);
             // 
-            // StationaryDialog
+            // StationeryDialog
             // 
-            this.StationaryDialog.FileName = "openFileDialog2";
-            this.StationaryDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.StationaryDialog_FileOk);
+            this.StationeryDialog.FileName = "openFileDialog2";
+            this.StationeryDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.StationaryDialog_FileOk);
             // 
             // FontDialog
             // 
@@ -202,7 +202,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.FontBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.StationaryBox);
+            this.Controls.Add(this.StationeryBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SpriteSheetBox);
             this.Controls.Add(this.label1);
@@ -218,14 +218,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SpriteSheetBox;
-        private System.Windows.Forms.TextBox StationaryBox;
+        private System.Windows.Forms.TextBox StationeryBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox FontBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox FontNameBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.OpenFileDialog SpriteSheetDialog;
-        private System.Windows.Forms.OpenFileDialog StationaryDialog;
+        private System.Windows.Forms.OpenFileDialog StationeryDialog;
         private System.Windows.Forms.OpenFileDialog FontDialog;
         private System.Windows.Forms.Button SpriteSheetButton;
         private System.Windows.Forms.Button StationaryButton;
