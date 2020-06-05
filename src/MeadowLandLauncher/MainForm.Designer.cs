@@ -40,12 +40,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 68);
+            this.label1.Location = new System.Drawing.Point(198, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 39);
+            this.label1.Size = new System.Drawing.Size(144, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MeadowLand Launcher Test\r\nDO NOT DISTRIBUTE!\r\nOnly for SamHub Friends Program mem" +
-    "bers";
+            this.label1.Text = "MeadowLand Launcher Test\r\n";
             // 
             // InstallBtn
             // 
@@ -55,6 +54,7 @@
             this.InstallBtn.TabIndex = 2;
             this.InstallBtn.Text = "Install";
             this.InstallBtn.UseVisualStyleBackColor = true;
+            this.InstallBtn.Click += new System.EventHandler(this.InstallBtn_Click);
             // 
             // packBtn
             // 
@@ -77,6 +77,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.packList);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MeadowLand Launcher";
             this.ResumeLayout(false);
             this.PerformLayout();

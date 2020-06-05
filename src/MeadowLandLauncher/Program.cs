@@ -20,7 +20,7 @@ namespace MeadowLandLauncher {
                 Directory.CreateDirectory(mllappdata);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ActivationPanel());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -12,18 +12,16 @@ namespace MeadowLandLauncher {
     public partial class MainForm : Form {
         public MainForm() {
             InitializeComponent();
-            this.FormClosed +=
-                new FormClosedEventHandler(this.MainForm_FormClosed);
-        }
-
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e) {
-            Application.Exit();
         }
 
         private void packBtn_Click(object sender, EventArgs e) {
             Hide();
             new PackGen().ShowDialog();
             Show();
+        }
+
+        private void InstallBtn_Click(object sender, EventArgs e) {
+            MessageBox.Show("This feature isn't available yet.", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

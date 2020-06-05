@@ -207,6 +207,7 @@
             this.Controls.Add(this.SpriteSheetBox);
             this.Controls.Add(this.label1);
             this.Name = "PackGen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resource Pack Maker";
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
