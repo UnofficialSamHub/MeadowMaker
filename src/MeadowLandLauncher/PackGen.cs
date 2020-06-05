@@ -56,7 +56,7 @@ namespace MeadowLandLauncher {
 
             JObject packinfo =
                 new JObject(
-                    new JProperty("versionNumber", "1"),
+                    new JProperty("versionNumber", 1),
                     new JProperty("pack",
                         new JObject(
                             new JProperty("spritesheetFilename", SpriteSheetDialog.SafeFileName),
