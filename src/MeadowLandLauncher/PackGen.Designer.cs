@@ -40,8 +40,6 @@
             this.generateButton = new System.Windows.Forms.Button();
             this.PackNameBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,16 +112,19 @@
             // SpriteSheetDialog
             // 
             this.SpriteSheetDialog.FileName = "openFileDialog1";
+            this.SpriteSheetDialog.Filter = "PNG|*.png";
             this.SpriteSheetDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.SpriteSheetDialog_FileOk);
             // 
             // StationeryDialog
             // 
             this.StationeryDialog.FileName = "openFileDialog2";
+            this.StationeryDialog.Filter = "PNG|*.png";
             this.StationeryDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.StationaryDialog_FileOk);
             // 
             // FontDialog
             // 
             this.FontDialog.FileName = "openFileDialog3";
+            this.FontDialog.Filter = "TTF|*.ttf";
             this.FontDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FontDialog_FileOk);
             // 
             // SpriteSheetButton
@@ -182,11 +183,6 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Pack Name";
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // PackGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,7 +205,6 @@
             this.Name = "PackGen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resource Pack Maker";
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +229,5 @@
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.TextBox PackNameBox;
         private System.Windows.Forms.Label label5;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }

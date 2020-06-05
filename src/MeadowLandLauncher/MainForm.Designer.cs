@@ -40,11 +40,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(198, 94);
+            this.label1.Location = new System.Drawing.Point(158, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 13);
+            this.label1.Size = new System.Drawing.Size(184, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MeadowLand Launcher Test\r\n";
+            this.label1.Text = "MeadowLand Launcher Demo (0.0.2)";
             // 
             // InstallBtn
             // 
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 121);
+            this.ClientSize = new System.Drawing.Size(354, 113);
             this.Controls.Add(this.packBtn);
             this.Controls.Add(this.InstallBtn);
             this.Controls.Add(this.label1);
