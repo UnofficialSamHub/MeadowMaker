@@ -25,6 +25,8 @@
         private void InitializeComponent() {
             this.packList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.InstallBtn = new System.Windows.Forms.Button();
+            this.packBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // packList
@@ -38,21 +40,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(577, 12);
+            this.label1.Location = new System.Drawing.Point(138, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "MeadowLand Launcher Test\r\nDO NOT DISTRIBUTE!\r\nOnly for SamHub Friends Program mem" +
     "bers";
             // 
-            // Form1
+            // InstallBtn
+            // 
+            this.InstallBtn.Location = new System.Drawing.Point(138, 12);
+            this.InstallBtn.Name = "InstallBtn";
+            this.InstallBtn.Size = new System.Drawing.Size(75, 23);
+            this.InstallBtn.TabIndex = 2;
+            this.InstallBtn.Text = "Install";
+            this.InstallBtn.UseVisualStyleBackColor = true;
+            // 
+            // packBtn
+            // 
+            this.packBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.packBtn.Location = new System.Drawing.Point(138, 41);
+            this.packBtn.Name = "packBtn";
+            this.packBtn.Size = new System.Drawing.Size(75, 23);
+            this.packBtn.TabIndex = 3;
+            this.packBtn.Text = "Make Pack";
+            this.packBtn.UseVisualStyleBackColor = false;
+            this.packBtn.Click += new System.EventHandler(this.packBtn_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(354, 121);
+            this.Controls.Add(this.packBtn);
+            this.Controls.Add(this.InstallBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.packList);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "MeadowLand Launcher";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -63,6 +87,8 @@
 
         private System.Windows.Forms.ListBox packList;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button InstallBtn;
+        private System.Windows.Forms.Button packBtn;
     }
 }
 

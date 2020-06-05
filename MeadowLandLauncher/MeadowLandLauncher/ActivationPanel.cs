@@ -13,12 +13,11 @@ namespace MeadowLandLauncher {
         public ActivationPanel() {
             InitializeComponent();
         }
-
+ 
         private void actBtn_Click(object sender, EventArgs e) {
-            if(ActivationBox.Text == "SHFP10402") {
-                this.Hide();
-                new MainForm().Show();
-            } else {
+            if(ActivationBox.Text == "SHFP10402") { //Activation Code
+                (new MainForm()).Show(); Hide();
+            } else { //Error Message If Activation Code is wrong
                 label1.Text = "Sneaky of ya! Maybe try joining the SHFP first or stop trying to be level 100 h$ack3r ;).";
             }
         }
