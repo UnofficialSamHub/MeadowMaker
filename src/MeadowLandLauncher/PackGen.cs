@@ -51,8 +51,7 @@ namespace MeadowLandLauncher {
             var mllappdata = "%appdata%\\MeadowLandLauncher";
             var packzippath = $"\\{PackNameBox.Text}.zip";
             mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
-
-            ZipFile.CreateFromDirectory(mllappdata, packzippath);
+            var finalpath = mllappdata + packzippath;
 
             JObject packinfo =
                 new JObject(
@@ -66,11 +65,15 @@ namespace MeadowLandLauncher {
 
             File.WriteAllText($"{mllappdata}/temp.json", packinfo.ToString());
 
-            using(ZipArchive archive = ZipFile.Open(mllappdata + packzippath, ZipArchiveMode.Update)) {
-                archive.CreateEntryFromFile(SpriteSheetDialog.FileName, SpriteSheetDialog.SafeFileName);
-                archive.CreateEntryFromFile(StationeryDialog.FileName, StationeryDialog.SafeFileName);
-                archive.CreateEntryFromFile(FontDialog.FileName, FontDialog.SafeFileName);
-                archive.CreateEntryFromFile($"{mllappdata}/temp.json", "packinfo.json");
+            if(File.Exists(finalpath)) {
+                File.Delete(finalpath);
+            }
+
+            using(ZipArchive archive = ZipFile.Open(finalpath, ZipArchiveMode.Update)) {
+                    archive.CreateEntryFromFile(SpriteSheetDialog.FileName, SpriteSheetDialog.SafeFileName);
+                    archive.CreateEntryFromFile(StationeryDialog.FileName, StationeryDialog.SafeFileName);
+                    archive.CreateEntryFromFile(FontDialog.FileName, FontDialog.SafeFileName);
+                    archive.CreateEntryFromFile($"{mllappdata}/temp.json", "packinfo.json");
             }
 
             File.Delete($"{mllappdata}/temp.json");
