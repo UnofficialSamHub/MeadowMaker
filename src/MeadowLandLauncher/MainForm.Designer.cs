@@ -44,7 +44,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MeadowLand Launcher Demo (0.0.2)";
+            this.label1.Text = "MeadowLand Launcher Demo (0.0.3)";
             // 
             // InstallBtn
             // 
