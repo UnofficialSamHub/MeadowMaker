@@ -66,11 +66,13 @@ namespace MeadowLandLauncher {
                             new JProperty("formsLetterFontFilename", FontDialog.SafeFileName),
                             new JProperty("formsLetterFontFamilyName", FontNameBox.Text))));
 
-            File.WriteAllText($"{mllappdata}/temp.json", packinfo.ToString());
-
             if(File.Exists(finalpath)) {
-                File.Delete(finalpath);
+                DialogResult dialogresult = MessageBox.Show($"A pack under the name {PackNameBox.Text} already exists.\nDo you want to replace it?", "MeadowLand Launcher", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (dialogresult == DialogResult.Cancel) { return; }
+                if (dialogresult == DialogResult.OK) { File.Delete(finalpath); }
             }
+
+            File.WriteAllText($"{mllappdata}/temp.json", packinfo.ToString());
 
             try {
                 using(ZipArchive archive = ZipFile.Open(finalpath, ZipArchiveMode.Update)) {
