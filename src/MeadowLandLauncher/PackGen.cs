@@ -43,7 +43,10 @@ namespace MeadowLandLauncher {
         }
 
         private void generateButton_Click(object sender, EventArgs e) {
+            generateButton.Text = "Generating...";
+            generateButton.Enabled = false;
             if(FontBox.Text=="" || StationeryBox.Text == "" || FontBox.Text == "" || FontNameBox.Text == "" || PackNameBox.Text == "") {
+                StopGenerator();
                 MessageBox.Show("One or more required fields are empty. :(", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -77,15 +80,23 @@ namespace MeadowLandLauncher {
                     archive.CreateEntryFromFile($"{mllappdata}/temp.json", "packinfo.json");
                 }
             } catch (ArgumentException err) {
+                StopGenerator();
                 MessageBox.Show($"Something went wrong during ZIP generation. Is {PackNameBox.Text} a valid name for a ZIP file?\n\nError details: {err.Message}", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             } catch (FileNotFoundException err) {
+                StopGenerator();
                 MessageBox.Show($"A file needed for generation doesn't appear to exist.\n\nError details: {err.Message}", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             File.Delete($"{mllappdata}/temp.json");
             Process.Start($@"{mllappdata}");
+            StopGenerator();
+        }
+        
+        private void StopGenerator() {
+            generateButton.Enabled = true;
+            generateButton.Text = "Generate!";
         }
     }
 }
