@@ -79,6 +79,9 @@ namespace MeadowLandLauncher {
             } catch (ArgumentException err) {
                 MessageBox.Show($"Something went wrong during ZIP generation. Is {PackNameBox.Text} a valid name for a ZIP file?\n\nError details: {err.Message}", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            } catch (FileNotFoundException err) {
+                MessageBox.Show($"A file needed for generation doesn't appear to exist.\n\nError details: {err.Message}", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             File.Delete($"{mllappdata}/temp.json");
