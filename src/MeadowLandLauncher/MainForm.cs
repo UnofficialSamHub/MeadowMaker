@@ -19,9 +19,5 @@ namespace MeadowLandLauncher {
             new PackGen().ShowDialog();
             Show();
         }
-
-        private void InstallBtn_Click(object sender, EventArgs e) {
-            MessageBox.Show("This feature isn't available yet.", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
     }
 }
