@@ -111,20 +111,20 @@
             // 
             // SpriteSheetDialog
             // 
-            this.SpriteSheetDialog.FileName = "openFileDialog1";
             this.SpriteSheetDialog.Filter = "PNG|*.png";
+            this.SpriteSheetDialog.Title = "Pick Sprite Sheet";
             this.SpriteSheetDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.SpriteSheetDialog_FileOk);
             // 
             // StationeryDialog
             // 
-            this.StationeryDialog.FileName = "openFileDialog2";
             this.StationeryDialog.Filter = "PNG|*.png";
+            this.StationeryDialog.Title = "Pick Stationery";
             this.StationeryDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.StationaryDialog_FileOk);
             // 
             // FontDialog
             // 
-            this.FontDialog.FileName = "openFileDialog3";
             this.FontDialog.Filter = "TTF|*.ttf";
+            this.FontDialog.Title = "Pick Font";
             this.FontDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.FontDialog_FileOk);
             // 
             // SpriteSheetButton

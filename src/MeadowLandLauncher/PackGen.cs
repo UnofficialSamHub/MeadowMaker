@@ -47,7 +47,7 @@ namespace MeadowLandLauncher {
             generateButton.Enabled = false;
             if(FontBox.Text=="" || StationeryBox.Text == "" || FontBox.Text == "" || FontNameBox.Text == "" || PackNameBox.Text == "") {
                 StopGenerator();
-                MessageBox.Show("One or more required fields are empty. :(", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("It appears you have forgotten to fill in some fields. All fields are required for pack generation.", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -67,7 +67,7 @@ namespace MeadowLandLauncher {
                             new JProperty("formsLetterFontFamilyName", FontNameBox.Text))));
 
             if(File.Exists(finalpath)) {
-                DialogResult dialogresult = MessageBox.Show($"A pack under the name {PackNameBox.Text} already exists.\nDo you want to replace it?", "MeadowLand Launcher", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult dialogresult = MessageBox.Show($"A pack under the name {PackNameBox.Text} already exists.\nDo you want to replace it?", "MeadowLand Maker", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogresult == DialogResult.Cancel) {
                     StopGenerator();
                     return; 
@@ -86,11 +86,11 @@ namespace MeadowLandLauncher {
                 }
             } catch (ArgumentException err) {
                 StopGenerator();
-                MessageBox.Show($"Something went wrong during ZIP generation. Is {PackNameBox.Text} a valid name for a ZIP file?\n\nError details: {err.Message}", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Something went wrong during ZIP generation. Is {PackNameBox.Text} a valid name for a ZIP file?\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             } catch (FileNotFoundException err) {
                 StopGenerator();
-                MessageBox.Show($"A file needed for generation doesn't appear to exist.\n\nError details: {err.Message}", "MeadowLand Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"A file needed for generation doesn't appear to exist.\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
