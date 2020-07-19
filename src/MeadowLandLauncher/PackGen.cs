@@ -68,7 +68,10 @@ namespace MeadowLandLauncher {
 
             if(File.Exists(finalpath)) {
                 DialogResult dialogresult = MessageBox.Show($"A pack under the name {PackNameBox.Text} already exists.\nDo you want to replace it?", "MeadowLand Launcher", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (dialogresult == DialogResult.Cancel) { return; }
+                if (dialogresult == DialogResult.Cancel) {
+                    StopGenerator();
+                    return; 
+                }
                 if (dialogresult == DialogResult.OK) { File.Delete(finalpath); }
             }
 
