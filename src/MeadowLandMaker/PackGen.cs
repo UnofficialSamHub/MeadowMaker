@@ -51,7 +51,7 @@ namespace MeadowLandLauncher {
                 return;
             }
 
-            var mllappdata = "%appdata%\\MeadowLandLauncher";
+            var mllappdata = "%appdata%\\MeadowLandMaker";
             var packzippath = $"\\{PackNameBox.Text}.zip";
             mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
             var finalpath = mllappdata + packzippath;

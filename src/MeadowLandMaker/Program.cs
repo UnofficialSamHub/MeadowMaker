@@ -13,7 +13,7 @@ namespace MeadowLandLauncher {
         /// </summary>
         [STAThread]
         static void Main() {
-            var mllappdata = "%appdata%\\MeadowLandLauncher";
+            var mllappdata = "%appdata%\\MeadowLandMaker";
             mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
 
             if(!Directory.Exists(mllappdata))
