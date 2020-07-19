@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using System.IO;
+using AutoUpdaterDotNET;
 
 namespace MeadowLandLauncher {
     static class Program {
@@ -18,6 +19,7 @@ namespace MeadowLandLauncher {
 
             if(!Directory.Exists(mllappdata))
                 Directory.CreateDirectory(mllappdata);
+            AutoUpdater.Start("https://raw.githubusercontent.com/UnofficialSamHub/MeadowMakerBackend/master/update.xml");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
