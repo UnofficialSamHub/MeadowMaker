@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.SpriteSheetBox = new System.Windows.Forms.TextBox();
             this.StationeryBox = new System.Windows.Forms.TextBox();
@@ -40,6 +41,10 @@
             this.generateButton = new System.Windows.Forms.Button();
             this.PackNameBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -97,7 +102,7 @@
             // 
             this.FontNameBox.Location = new System.Drawing.Point(7, 165);
             this.FontNameBox.Name = "FontNameBox";
-            this.FontNameBox.Size = new System.Drawing.Size(781, 20);
+            this.FontNameBox.Size = new System.Drawing.Size(748, 20);
             this.FontNameBox.TabIndex = 7;
             // 
             // label4
@@ -134,6 +139,7 @@
             this.SpriteSheetButton.Size = new System.Drawing.Size(27, 23);
             this.SpriteSheetButton.TabIndex = 8;
             this.SpriteSheetButton.Text = "...";
+            this.ToolTip.SetToolTip(this.SpriteSheetButton, "This is the Sprite Sheet for your pack. This includes the birds, the mailbox...");
             this.SpriteSheetButton.UseVisualStyleBackColor = true;
             this.SpriteSheetButton.Click += new System.EventHandler(this.SpriteSheetButton_Click);
             // 
@@ -144,6 +150,7 @@
             this.StationaryButton.Size = new System.Drawing.Size(27, 23);
             this.StationaryButton.TabIndex = 9;
             this.StationaryButton.Text = "...";
+            this.ToolTip.SetToolTip(this.StationaryButton, "This is the background for when you get a letter.");
             this.StationaryButton.UseVisualStyleBackColor = true;
             this.StationaryButton.Click += new System.EventHandler(this.StationaryButton_Click);
             // 
@@ -154,6 +161,7 @@
             this.FontButton.Size = new System.Drawing.Size(27, 23);
             this.FontButton.TabIndex = 10;
             this.FontButton.Text = "...";
+            this.ToolTip.SetToolTip(this.FontButton, "This is the font used in letters.");
             this.FontButton.UseVisualStyleBackColor = true;
             this.FontButton.Click += new System.EventHandler(this.FontButton_Click);
             // 
@@ -164,6 +172,7 @@
             this.generateButton.Size = new System.Drawing.Size(781, 23);
             this.generateButton.TabIndex = 12;
             this.generateButton.Text = "Generate!";
+            this.ToolTip.SetToolTip(this.generateButton, "Click this button once you\'re ready to make your pack.");
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
             // 
@@ -171,7 +180,7 @@
             // 
             this.PackNameBox.Location = new System.Drawing.Point(7, 209);
             this.PackNameBox.Name = "PackNameBox";
-            this.PackNameBox.Size = new System.Drawing.Size(781, 20);
+            this.PackNameBox.Size = new System.Drawing.Size(748, 20);
             this.PackNameBox.TabIndex = 14;
             // 
             // label5
@@ -183,12 +192,57 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Pack Name";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(128, 266);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(537, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Hover your mouse over buttons, and information about them will appear. You can us" +
+    "e \"...\" buttons to attach files.";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ToolTip
+            // 
+            this.ToolTip.AutoPopDelay = 5000;
+            this.ToolTip.InitialDelay = 0;
+            this.ToolTip.IsBalloon = true;
+            this.ToolTip.ReshowDelay = 0;
+            this.ToolTip.ShowAlways = true;
+            this.ToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ToolTip.ToolTipTitle = "Information";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(761, 162);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "?";
+            this.ToolTip.SetToolTip(this.button1, "This is the Font Name. Be careful with getting this right, because your font will" +
+        " not load if you make a typo.");
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(761, 206);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 23);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "?";
+            this.ToolTip.SetToolTip(this.button2, "This is the name for your pack. It will be used as the name for the ZIP file.");
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // PackGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 266);
+            this.ClientSize = new System.Drawing.Size(800, 288);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.PackNameBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.generateButton);
@@ -230,5 +284,9 @@
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.TextBox PackNameBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolTip ToolTip;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

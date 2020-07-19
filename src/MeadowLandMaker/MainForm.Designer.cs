@@ -23,8 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.packBtn = new System.Windows.Forms.Button();
+            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -34,7 +36,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MeadowLand Maker (0.1.2)";
+            this.label1.Text = "MeadowLand Maker (0.1.3)";
             // 
             // packBtn
             // 
@@ -44,8 +46,19 @@
             this.packBtn.Size = new System.Drawing.Size(75, 23);
             this.packBtn.TabIndex = 3;
             this.packBtn.Text = "Make Pack";
+            this.ToolTip.SetToolTip(this.packBtn, "Ready to make a pack? Just click this button!");
             this.packBtn.UseVisualStyleBackColor = false;
             this.packBtn.Click += new System.EventHandler(this.packBtn_Click);
+            // 
+            // ToolTip
+            // 
+            this.ToolTip.AutoPopDelay = 5000;
+            this.ToolTip.InitialDelay = 0;
+            this.ToolTip.IsBalloon = true;
+            this.ToolTip.ReshowDelay = 0;
+            this.ToolTip.ShowAlways = true;
+            this.ToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ToolTip.ToolTipTitle = "Information";
             // 
             // MainForm
             // 
@@ -65,6 +78,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button packBtn;
+        private System.Windows.Forms.ToolTip ToolTip;
     }
 }
 
