@@ -41,7 +41,7 @@
             this.generateButton = new System.Windows.Forms.Button();
             this.PackNameBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -192,16 +192,16 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Pack Name";
             // 
-            // label6
+            // statusLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 266);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(537, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Hover your mouse over buttons, and information about them will appear. You can us" +
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(4, 266);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(537, 13);
+            this.statusLabel.TabIndex = 15;
+            this.statusLabel.Text = "Hover your mouse over buttons, and information about them will appear. You can us" +
     "e \"...\" buttons to attach files.";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ToolTip
             // 
@@ -239,10 +239,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 288);
+            this.ClientSize = new System.Drawing.Size(800, 286);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.PackNameBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.generateButton);
@@ -259,7 +259,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PackGen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Resource Pack Maker (Preview)";
+            this.Text = "Resource Pack Creator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,7 +284,7 @@
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.TextBox PackNameBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

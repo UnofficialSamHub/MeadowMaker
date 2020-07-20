@@ -28,16 +28,17 @@
             this.packBtn = new System.Windows.Forms.Button();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.packFldrBtn = new System.Windows.Forms.Button();
+            this.discordBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 29);
+            this.label1.Location = new System.Drawing.Point(111, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MeadowLand Maker (0.1.5)";
+            this.label1.Text = "MeadowLand Maker (1.0.0)";
             // 
             // packBtn
             // 
@@ -72,11 +73,23 @@
             this.packFldrBtn.UseVisualStyleBackColor = true;
             this.packFldrBtn.Click += new System.EventHandler(this.packFldrBtn_Click);
             // 
+            // discordBtn
+            // 
+            this.discordBtn.Location = new System.Drawing.Point(204, 4);
+            this.discordBtn.Name = "discordBtn";
+            this.discordBtn.Size = new System.Drawing.Size(138, 23);
+            this.discordBtn.TabIndex = 5;
+            this.discordBtn.Text = "SamHub Discord";
+            this.ToolTip.SetToolTip(this.discordBtn, "You can use this button to join our Discord Server!");
+            this.discordBtn.UseVisualStyleBackColor = true;
+            this.discordBtn.Click += new System.EventHandler(this.discordBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 51);
+            this.ClientSize = new System.Drawing.Size(354, 58);
+            this.Controls.Add(this.discordBtn);
             this.Controls.Add(this.packFldrBtn);
             this.Controls.Add(this.packBtn);
             this.Controls.Add(this.label1);
@@ -93,6 +106,7 @@
         private System.Windows.Forms.Button packBtn;
         private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.Button packFldrBtn;
+        private System.Windows.Forms.Button discordBtn;
     }
 }
 

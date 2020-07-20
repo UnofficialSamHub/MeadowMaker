@@ -102,6 +102,7 @@ namespace MeadowLandLauncher {
                 return;
             }
 
+            statusLabel.Text = $"{PackNameBox.Text} was created!";
             File.Delete($"{mllappdata}/packs/temp.json");
             Process.Start($@"{mllappdata}/packs");
             StopGenerator();
@@ -114,7 +115,8 @@ namespace MeadowLandLauncher {
                 var mllappdata = "%appdata%\\MeadowLandMaker";
                 mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
                 try { File.Delete(finalpath); } catch { }
-                try { File.Delete($"{mllappdata}/temp.json"); } catch { }
+                try { File.Delete($"{mllappdata}/packs/temp.json"); } catch { }
+                statusLabel.Text = $"ZIP data for {PackNameBox.Text} was deleted, probably due to an error.";
             }
         }
     }

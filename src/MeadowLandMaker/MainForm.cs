@@ -30,5 +30,11 @@ namespace MeadowLandLauncher {
                 MessageBox.Show($"Something went wrong while opening up the pack folder. Have you made a pack yet?\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void discordBtn_Click(object sender, EventArgs e) {
+            if(MessageBox.Show($"Hey! The SamHub Discord is not affiliated with SamPerson. If you click OK, an external link will be opened. Continue anyway?", "MeadowLand Maker", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK) {
+                Process.Start("https://discord.gg/W4kTbaV");
+            }
+        }
     }
 }
