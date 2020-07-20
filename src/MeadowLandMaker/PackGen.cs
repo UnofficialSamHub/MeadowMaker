@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,9 @@ namespace MeadowLandLauncher {
 
         private void FontDialog_FileOk(object sender, CancelEventArgs e) {
             FontBox.Text = FontDialog.FileName;
+            PrivateFontCollection fontCol = new PrivateFontCollection();
+            fontCol.AddFontFile(FontBox.Text);
+            FontNameBox.Text = fontCol.Families[0].Name;
         }
 
         private void generateButton_Click(object sender, EventArgs e) {
