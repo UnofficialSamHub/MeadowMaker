@@ -45,15 +45,14 @@ namespace MeadowLandLauncher {
         private void generateButton_Click(object sender, EventArgs e) {
             generateButton.Text = "Generating...";
             generateButton.Enabled = false;
-            if(FontBox.Text=="" || StationeryBox.Text == "" || SpriteSheetBox.Text == "" || FontNameBox.Text == "" || PackNameBox.Text == "" || MeadowVersion.Text == "") {
+            if(FontBox.Text=="" || StationeryBox.Text == "" || SpriteSheetBox.Text == "" || FontNameBox.Text == "" || PackNameBox.Text == "") {
                 StopGenerator();
                 string ErrorMSG = "It appears you have forgotten to fill in some fields. All fields are required for pack generation. The following fields were forgotten:\n\n";
                 if(FontBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Font, "); }
                 if(StationeryBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Stationery, "); }
                 if(SpriteSheetBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Sprite Sheet, "); }
                 if(FontNameBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Font Name, "); }
-                if(PackNameBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Pack Name, "); }
-                if(MeadowVersion.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Meadow Version"); }
+                if(PackNameBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Pack Name"); }
                 MessageBox.Show(ErrorMSG, "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -65,7 +64,7 @@ namespace MeadowLandLauncher {
 
             JObject packinfo =
                 new JObject(
-                    new JProperty("versionNumber", MeadowVersion.Text),
+                    new JProperty("versionNumber", 1),
                     new JProperty("pack",
                         new JObject(
                             new JProperty("spritesheetFilename", SpriteSheetDialog.SafeFileName),
