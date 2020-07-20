@@ -45,6 +45,8 @@
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.MeadowVersion = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -195,7 +197,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(128, 266);
+            this.label6.Location = new System.Drawing.Point(4, 266);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(537, 13);
             this.label6.TabIndex = 15;
@@ -234,12 +236,36 @@
             this.ToolTip.SetToolTip(this.button2, "This is the name for your pack. It will be used as the name for the ZIP file.");
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // MeadowVersion
+            // 
+            this.MeadowVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MeadowVersion.FormattingEnabled = true;
+            this.MeadowVersion.Items.AddRange(new object[] {
+            "1"});
+            this.MeadowVersion.Location = new System.Drawing.Point(755, 263);
+            this.MeadowVersion.Name = "MeadowVersion";
+            this.MeadowVersion.Size = new System.Drawing.Size(33, 21);
+            this.MeadowVersion.TabIndex = 18;
+            this.ToolTip.SetToolTip(this.MeadowVersion, "This is the version of the Meadow used in packs. This should be 1 for the latest " +
+        "Meadow.");
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(663, 266);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Meadow Version";
+            // 
             // PackGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 288);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.MeadowVersion);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -288,5 +314,7 @@
         private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox MeadowVersion;
+        private System.Windows.Forms.Label label7;
     }
 }
