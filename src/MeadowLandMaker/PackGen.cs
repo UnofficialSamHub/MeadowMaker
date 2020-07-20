@@ -60,7 +60,9 @@ namespace MeadowLandLauncher {
             var mllappdata = "%appdata%\\MeadowLandMaker";
             var packzippath = $"\\{PackNameBox.Text}.zip";
             mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
-            var finalpath = mllappdata + packzippath;
+            var finalpath = mllappdata + "\\packs\\" + packzippath;
+
+            Directory.CreateDirectory($"{mllappdata}/packs");
 
             JObject packinfo =
                 new JObject(
@@ -81,14 +83,14 @@ namespace MeadowLandLauncher {
                 if (dialogresult == DialogResult.OK) { File.Delete(finalpath); }
             }
 
-            File.WriteAllText($"{mllappdata}/temp.json", packinfo.ToString());
+            File.WriteAllText($"{mllappdata}/packs/temp.json", packinfo.ToString());
 
             try {
                 using(ZipArchive archive = ZipFile.Open(finalpath, ZipArchiveMode.Update)) {
                     archive.CreateEntryFromFile(SpriteSheetDialog.FileName, SpriteSheetDialog.SafeFileName);
                     archive.CreateEntryFromFile(StationeryDialog.FileName, StationeryDialog.SafeFileName);
                     archive.CreateEntryFromFile(FontDialog.FileName, FontDialog.SafeFileName);
-                    archive.CreateEntryFromFile($"{mllappdata}/temp.json", "packinfo.json");
+                    archive.CreateEntryFromFile($"{mllappdata}/packs/temp.json", "packinfo.json");
                 }
             } catch (ArgumentException err) {
                 StopGenerator(true, finalpath);
@@ -100,8 +102,8 @@ namespace MeadowLandLauncher {
                 return;
             }
 
-            File.Delete($"{mllappdata}/temp.json");
-            Process.Start($@"{mllappdata}");
+            File.Delete($"{mllappdata}/packs/temp.json");
+            Process.Start($@"{mllappdata}/packs");
             StopGenerator();
         }
         

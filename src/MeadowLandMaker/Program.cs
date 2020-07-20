@@ -17,8 +17,7 @@ namespace MeadowLandLauncher {
             var mllappdata = "%appdata%\\MeadowLandMaker";
             mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
 
-            if(!Directory.Exists(mllappdata))
-                Directory.CreateDirectory(mllappdata);
+            Directory.CreateDirectory(mllappdata);
             AutoUpdater.Start("https://raw.githubusercontent.com/UnofficialSamHub/MeadowMakerBackend/master/update.xml");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
