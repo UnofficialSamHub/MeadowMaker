@@ -92,11 +92,11 @@ namespace MeadowLandLauncher {
                     archive.CreateEntryFromFile($"{mllappdata}/temp.json", "packinfo.json");
                 }
             } catch (ArgumentException err) {
-                StopGenerator();
+                StopGenerator(true, finalpath);
                 MessageBox.Show($"Something went wrong during ZIP generation. Is {PackNameBox.Text} a valid name for a ZIP file?\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             } catch (FileNotFoundException err) {
-                StopGenerator();
+                StopGenerator(true, finalpath);
                 MessageBox.Show($"A file needed for generation doesn't appear to exist.\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -106,9 +106,15 @@ namespace MeadowLandLauncher {
             StopGenerator();
         }
         
-        private void StopGenerator() {
+        private void StopGenerator(bool DeleteZipData = false, string finalpath = "") {
             generateButton.Enabled = true;
             generateButton.Text = "Generate!";
+            if(DeleteZipData == true) {
+                var mllappdata = "%appdata%\\MeadowLandMaker";
+                mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
+                try { File.Delete(finalpath); } catch { }
+                try { File.Delete($"{mllappdata}/temp.json"); } catch { }
+            }
         }
     }
 }
