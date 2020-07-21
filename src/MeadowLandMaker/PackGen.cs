@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Runtime;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,14 +89,15 @@ namespace MeadowLandLauncher {
                 if (dialogresult == DialogResult.OK) { File.Delete(finalpath); }
             }
 
-            File.WriteAllText($"{mllappdata}/packs/temp.json", packinfo.ToString());
+            var tempfile = Path.GetTempFileName();
+            File.WriteAllText(tempfile, packinfo.ToString());
 
             try {
                 using(ZipArchive archive = ZipFile.Open(finalpath, ZipArchiveMode.Update)) {
                     archive.CreateEntryFromFile(SpriteSheetDialog.FileName, SpriteSheetDialog.SafeFileName);
                     archive.CreateEntryFromFile(StationeryDialog.FileName, StationeryDialog.SafeFileName);
                     archive.CreateEntryFromFile(FontDialog.FileName, FontDialog.SafeFileName);
-                    archive.CreateEntryFromFile($"{mllappdata}/packs/temp.json", "packinfo.json");
+                    archive.CreateEntryFromFile(tempfile, "packinfo.json");
                 }
             } catch (ArgumentException err) {
                 StopGenerator(true, finalpath);
@@ -108,7 +110,7 @@ namespace MeadowLandLauncher {
             }
 
             statusLabel.Text = $"{PackNameBox.Text} was created!";
-            File.Delete($"{mllappdata}/packs/temp.json");
+            File.Delete(tempfile);
             Process.Start($@"{mllappdata}/packs");
             StopGenerator();
         }
