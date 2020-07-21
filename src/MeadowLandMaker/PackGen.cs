@@ -49,17 +49,18 @@ namespace MeadowLandLauncher {
         private void generateButton_Click(object sender, EventArgs e) {
             generateButton.Text = "Generating...";
             generateButton.Enabled = false;
-            if(FontBox.Text=="" || StationeryBox.Text == "" || SpriteSheetBox.Text == "" || FontNameBox.Text == "" || PackNameBox.Text == "") {
+            if(FontBox.Text=="" || StationeryBox.Text == "" || SpriteSheetBox.Text == "" || FontNameBox.Text == "") {
                 StopGenerator();
-                string ErrorMSG = "It appears you have forgotten to fill in some fields. All fields are required for pack generation. The following fields were forgotten:\n\n";
+                string ErrorMSG = "It appears you have forgotten to fill in some fields. The following fields were forgotten:\n\n";
                 if(FontBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Font, "); }
                 if(StationeryBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Stationery, "); }
                 if(SpriteSheetBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Sprite Sheet, "); }
-                if(FontNameBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Font Name, "); }
-                if(PackNameBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Pack Name"); }
+                if(FontNameBox.Text == "") { ErrorMSG = string.Concat(ErrorMSG, "Font Name "); }
                 MessageBox.Show(ErrorMSG, "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if(PackNameBox.Text == "") { PackNameBox.Text = $@"{DateTime.Now.Ticks}"; }
 
             var mllappdata = "%appdata%\\MeadowLandMaker";
             var packzippath = $"\\{PackNameBox.Text}.zip";
