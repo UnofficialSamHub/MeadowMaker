@@ -13,6 +13,9 @@ namespace MeadowLandLauncher {
     public partial class MainForm : Form {
         public MainForm() {
             InitializeComponent();
+            #if DEBUG
+            MessageBox.Show("Test build alert! This is a testing version of MLM.", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            #endif
         }
 
         private void packBtn_Click(object sender, EventArgs e) {
