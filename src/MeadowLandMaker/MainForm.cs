@@ -27,7 +27,7 @@ namespace MeadowLandLauncher {
             try {
                 Process.Start($@"{mllappdata}\\packs");
             } catch (Win32Exception err) {
-                MessageBox.Show($"Something went wrong while opening up the pack folder. Have you made a pack yet?\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Have you made a pack yet? The pack folder isn't opening...\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
