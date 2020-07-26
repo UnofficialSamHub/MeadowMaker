@@ -36,9 +36,9 @@
             this.StationeryDialog = new System.Windows.Forms.OpenFileDialog();
             this.FontDialog = new System.Windows.Forms.OpenFileDialog();
             this.SpriteSheetButton = new System.Windows.Forms.Button();
-            this.StationaryButton = new System.Windows.Forms.Button();
+            this.StationeryButton = new System.Windows.Forms.Button();
             this.FontButton = new System.Windows.Forms.Button();
-            this.generateButton = new System.Windows.Forms.Button();
+            this.GenerateBtn = new System.Windows.Forms.Button();
             this.PackNameBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -143,16 +143,16 @@
             this.SpriteSheetButton.UseVisualStyleBackColor = true;
             this.SpriteSheetButton.Click += new System.EventHandler(this.SpriteSheetButton_Click);
             // 
-            // StationaryButton
+            // StationeryButton
             // 
-            this.StationaryButton.Location = new System.Drawing.Point(761, 70);
-            this.StationaryButton.Name = "StationaryButton";
-            this.StationaryButton.Size = new System.Drawing.Size(27, 23);
-            this.StationaryButton.TabIndex = 9;
-            this.StationaryButton.Text = "...";
-            this.ToolTip.SetToolTip(this.StationaryButton, "This is the background for when you get a letter.");
-            this.StationaryButton.UseVisualStyleBackColor = true;
-            this.StationaryButton.Click += new System.EventHandler(this.StationaryButton_Click);
+            this.StationeryButton.Location = new System.Drawing.Point(761, 70);
+            this.StationeryButton.Name = "StationeryButton";
+            this.StationeryButton.Size = new System.Drawing.Size(27, 23);
+            this.StationeryButton.TabIndex = 9;
+            this.StationeryButton.Text = "...";
+            this.ToolTip.SetToolTip(this.StationeryButton, "This is the background for when you get a letter.");
+            this.StationeryButton.UseVisualStyleBackColor = true;
+            this.StationeryButton.Click += new System.EventHandler(this.StationaryButton_Click);
             // 
             // FontButton
             // 
@@ -165,16 +165,16 @@
             this.FontButton.UseVisualStyleBackColor = true;
             this.FontButton.Click += new System.EventHandler(this.FontButton_Click);
             // 
-            // generateButton
+            // GenerateBtn
             // 
-            this.generateButton.Location = new System.Drawing.Point(7, 235);
-            this.generateButton.Name = "generateButton";
-            this.generateButton.Size = new System.Drawing.Size(781, 23);
-            this.generateButton.TabIndex = 12;
-            this.generateButton.Text = "Generate!";
-            this.ToolTip.SetToolTip(this.generateButton, "Click this button once you\'re ready to make your pack.");
-            this.generateButton.UseVisualStyleBackColor = true;
-            this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
+            this.GenerateBtn.Location = new System.Drawing.Point(7, 235);
+            this.GenerateBtn.Name = "GenerateBtn";
+            this.GenerateBtn.Size = new System.Drawing.Size(781, 23);
+            this.GenerateBtn.TabIndex = 12;
+            this.GenerateBtn.Text = "Generate!";
+            this.ToolTip.SetToolTip(this.GenerateBtn, "Click this button once you\'re ready to make your pack.");
+            this.GenerateBtn.UseVisualStyleBackColor = true;
+            this.GenerateBtn.Click += new System.EventHandler(this.GenerateBtn_Click);
             // 
             // PackNameBox
             // 
@@ -245,9 +245,9 @@
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.PackNameBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.generateButton);
+            this.Controls.Add(this.GenerateBtn);
             this.Controls.Add(this.FontButton);
-            this.Controls.Add(this.StationaryButton);
+            this.Controls.Add(this.StationeryButton);
             this.Controls.Add(this.SpriteSheetButton);
             this.Controls.Add(this.FontNameBox);
             this.Controls.Add(this.label4);
@@ -279,9 +279,9 @@
         private System.Windows.Forms.OpenFileDialog StationeryDialog;
         private System.Windows.Forms.OpenFileDialog FontDialog;
         private System.Windows.Forms.Button SpriteSheetButton;
-        private System.Windows.Forms.Button StationaryButton;
+        private System.Windows.Forms.Button StationeryButton;
         private System.Windows.Forms.Button FontButton;
-        private System.Windows.Forms.Button generateButton;
+        private System.Windows.Forms.Button GenerateBtn;
         private System.Windows.Forms.TextBox PackNameBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label statusLabel;

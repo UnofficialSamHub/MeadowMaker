@@ -33,23 +33,37 @@ namespace MeadowLandLauncher {
         }
 
         private void SpriteSheetDialog_FileOk(object sender, CancelEventArgs e) {
+            if(ImageDimensionCheck(SpriteSheetDialog.FileName, 674, 94) == false) {
+                if(MessageBox.Show($"Hey! This Sprite Sheet is not the right size. Continue anyways?", "MeadowLand Maker", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) {
+                    return;
+                }
+            }
             SpriteSheetBox.Text = SpriteSheetDialog.FileName;
         }
 
         private void StationaryDialog_FileOk(object sender, CancelEventArgs e) {
+            if(ImageDimensionCheck(StationeryDialog.FileName, 64, 90) == false) {
+                if(MessageBox.Show($"Hey! This Stationery is not the right size. Continue anyways?", "MeadowLand Maker", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) {
+                    return;
+                }
+            }
             StationeryBox.Text = StationeryDialog.FileName;
         }
 
         private void FontDialog_FileOk(object sender, CancelEventArgs e) {
             FontBox.Text = FontDialog.FileName;
-            PrivateFontCollection fontCol = new PrivateFontCollection();
-            fontCol.AddFontFile(FontBox.Text);
-            FontNameBox.Text = fontCol.Families[0].Name;
+            try {
+                PrivateFontCollection fontCol = new PrivateFontCollection();
+                fontCol.AddFontFile(FontBox.Text);
+                FontNameBox.Text = fontCol.Families[0].Name;
+            } catch {
+                MessageBox.Show("Hmm, we're not sure what the Font Name for this font is.\nYou can still use this font, but you'll have to enter in the Font Name manually.", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void generateButton_Click(object sender, EventArgs e) {
-            generateButton.Text = "Generating...";
-            generateButton.Enabled = false;
+        private void GenerateBtn_Click(object sender, EventArgs e) {
+            GenerateBtn.Text = "Generating...";
+            GenerateBtn.Enabled = false;
             if(FontBox.Text=="" || StationeryBox.Text == "" || SpriteSheetBox.Text == "" || FontNameBox.Text == "") {
                 StopGenerator();
                 string ErrorMSG = "It appears you have forgotten to fill in some fields. The following fields were forgotten:\n\n";
@@ -90,6 +104,7 @@ namespace MeadowLandLauncher {
             }
 
             var tempfile = Path.GetTempFileName();
+            MessageBox.Show(tempfile);
             File.WriteAllText(tempfile, packinfo.ToString());
 
             try {
@@ -116,14 +131,31 @@ namespace MeadowLandLauncher {
         }
         
         private void StopGenerator(bool DeleteZipData = false, string finalpath = "") {
-            generateButton.Enabled = true;
-            generateButton.Text = "Generate!";
+            GenerateBtn.Enabled = true;
+            GenerateBtn.Text = "Generate!";
             if(DeleteZipData == true) {
                 var mllappdata = "%appdata%\\MeadowLandMaker";
                 mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
                 try { File.Delete(finalpath); } catch { }
                 try { File.Delete($"{mllappdata}/packs/temp.json"); } catch { }
                 statusLabel.Text = $"ZIP data for {PackNameBox.Text} was deleted, probably due to an error.";
+            }
+        }
+
+        private dynamic ImageDimensionCheck(string file, int width, int height, bool DisplayErrors = true) {
+            try {
+                using(Stream stream = File.OpenRead(file)) {
+                    using(Image sourceImage = Image.FromStream(stream, false, false)) {
+                            if(sourceImage.Width == width && sourceImage.Height == height) {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                    }
+                }
+            } catch {
+                if(DisplayErrors == true) { MessageBox.Show("Hmm, we're not sure what the size of this image is, so we can't tell you if it's the right size.\nHowever, you can still use this image.", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                return null;
             }
         }
     }

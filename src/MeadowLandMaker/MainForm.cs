@@ -18,13 +18,13 @@ namespace MeadowLandLauncher {
             #endif
         }
 
-        private void packBtn_Click(object sender, EventArgs e) {
+        private void PackBtn_Click(object sender, EventArgs e) {
             Hide();
             new PackGen().ShowDialog();
             Show();
         }
 
-        private void packFldrBtn_Click(object sender, EventArgs e) {
+        private void PackFldrBtn_Click(object sender, EventArgs e) {
             var mllappdata = "%appdata%\\MeadowLandMaker";
             mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
             try {
@@ -34,7 +34,7 @@ namespace MeadowLandLauncher {
             }
         }
 
-        private void discordBtn_Click(object sender, EventArgs e) {
+        private void DiscordBtn_Click(object sender, EventArgs e) {
             if(MessageBox.Show($"Hey! The SamHub Discord is not affiliated with SamPerson. If you click OK, an external link will be opened. Continue anyway?", "MeadowLand Maker", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK) {
                 Process.Start("https://discord.gg/W4kTbaV");
             }

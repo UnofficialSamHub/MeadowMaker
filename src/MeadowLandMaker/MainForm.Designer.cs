@@ -25,10 +25,10 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.packBtn = new System.Windows.Forms.Button();
+            this.PackBtn = new System.Windows.Forms.Button();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.packFldrBtn = new System.Windows.Forms.Button();
-            this.discordBtn = new System.Windows.Forms.Button();
+            this.PackFldrBtn = new System.Windows.Forms.Button();
+            this.DiscordBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -40,17 +40,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "MeadowLand Maker (1.0.3)";
             // 
-            // packBtn
+            // PackBtn
             // 
-            this.packBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.packBtn.Location = new System.Drawing.Point(12, 4);
-            this.packBtn.Name = "packBtn";
-            this.packBtn.Size = new System.Drawing.Size(75, 23);
-            this.packBtn.TabIndex = 3;
-            this.packBtn.Text = "Make Pack";
-            this.ToolTip.SetToolTip(this.packBtn, "Ready to make a pack? Just click this button!");
-            this.packBtn.UseVisualStyleBackColor = false;
-            this.packBtn.Click += new System.EventHandler(this.packBtn_Click);
+            this.PackBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.PackBtn.Location = new System.Drawing.Point(12, 4);
+            this.PackBtn.Name = "PackBtn";
+            this.PackBtn.Size = new System.Drawing.Size(75, 23);
+            this.PackBtn.TabIndex = 3;
+            this.PackBtn.Text = "Make Pack";
+            this.ToolTip.SetToolTip(this.PackBtn, "Ready to make a pack? Just click this button!");
+            this.PackBtn.UseVisualStyleBackColor = false;
+            this.PackBtn.Click += new System.EventHandler(this.PackBtn_Click);
             // 
             // ToolTip
             // 
@@ -62,36 +62,36 @@
             this.ToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.ToolTip.ToolTipTitle = "Information";
             // 
-            // packFldrBtn
+            // PackFldrBtn
             // 
-            this.packFldrBtn.Location = new System.Drawing.Point(93, 4);
-            this.packFldrBtn.Name = "packFldrBtn";
-            this.packFldrBtn.Size = new System.Drawing.Size(105, 23);
-            this.packFldrBtn.TabIndex = 4;
-            this.packFldrBtn.Text = "Open Pack Folder";
-            this.ToolTip.SetToolTip(this.packFldrBtn, "Forgot where the packs are stored? This button will open the folder up for you!");
-            this.packFldrBtn.UseVisualStyleBackColor = true;
-            this.packFldrBtn.Click += new System.EventHandler(this.packFldrBtn_Click);
+            this.PackFldrBtn.Location = new System.Drawing.Point(93, 4);
+            this.PackFldrBtn.Name = "PackFldrBtn";
+            this.PackFldrBtn.Size = new System.Drawing.Size(105, 23);
+            this.PackFldrBtn.TabIndex = 4;
+            this.PackFldrBtn.Text = "Open Pack Folder";
+            this.ToolTip.SetToolTip(this.PackFldrBtn, "Forgot where the packs are stored? This button will open the folder up for you!");
+            this.PackFldrBtn.UseVisualStyleBackColor = true;
+            this.PackFldrBtn.Click += new System.EventHandler(this.PackFldrBtn_Click);
             // 
-            // discordBtn
+            // DiscordBtn
             // 
-            this.discordBtn.Location = new System.Drawing.Point(204, 4);
-            this.discordBtn.Name = "discordBtn";
-            this.discordBtn.Size = new System.Drawing.Size(138, 23);
-            this.discordBtn.TabIndex = 5;
-            this.discordBtn.Text = "SamHub Discord";
-            this.ToolTip.SetToolTip(this.discordBtn, "You can use this button to join our Discord Server!");
-            this.discordBtn.UseVisualStyleBackColor = true;
-            this.discordBtn.Click += new System.EventHandler(this.discordBtn_Click);
+            this.DiscordBtn.Location = new System.Drawing.Point(204, 4);
+            this.DiscordBtn.Name = "DiscordBtn";
+            this.DiscordBtn.Size = new System.Drawing.Size(138, 23);
+            this.DiscordBtn.TabIndex = 5;
+            this.DiscordBtn.Text = "SamHub Discord";
+            this.ToolTip.SetToolTip(this.DiscordBtn, "You can use this button to join our Discord Server!");
+            this.DiscordBtn.UseVisualStyleBackColor = true;
+            this.DiscordBtn.Click += new System.EventHandler(this.DiscordBtn_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 58);
-            this.Controls.Add(this.discordBtn);
-            this.Controls.Add(this.packFldrBtn);
-            this.Controls.Add(this.packBtn);
+            this.Controls.Add(this.DiscordBtn);
+            this.Controls.Add(this.PackFldrBtn);
+            this.Controls.Add(this.PackBtn);
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -103,10 +103,10 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button packBtn;
+        private System.Windows.Forms.Button PackBtn;
         private System.Windows.Forms.ToolTip ToolTip;
-        private System.Windows.Forms.Button packFldrBtn;
-        private System.Windows.Forms.Button discordBtn;
+        private System.Windows.Forms.Button PackFldrBtn;
+        private System.Windows.Forms.Button DiscordBtn;
     }
 }
 
