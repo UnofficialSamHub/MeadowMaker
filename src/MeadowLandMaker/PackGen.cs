@@ -34,7 +34,7 @@ namespace MeadowLandLauncher {
 
         private void SpriteSheetDialog_FileOk(object sender, CancelEventArgs e) {
             if(ImageDimensionCheck(SpriteSheetDialog.FileName, 674, 94) == false) {
-                if(MessageBox.Show($"Hey! This Sprite Sheet is not the right size. Continue anyways?", "MeadowLand Maker", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) {
+                if(MessageBox.Show($"Hey! This Sprite Sheet is not the right size. Continue anyways?\nSprite Sheets with wrong sizes may result in very bad glitches. The correct size would be 674x94.", "MeadowLand Maker", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) {
                     return;
                 }
             }
@@ -43,7 +43,7 @@ namespace MeadowLandLauncher {
 
         private void StationaryDialog_FileOk(object sender, CancelEventArgs e) {
             if(ImageDimensionCheck(StationeryDialog.FileName, 64, 90) == false) {
-                if(MessageBox.Show($"Hey! This Stationery is not the right size. Continue anyways?", "MeadowLand Maker", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) {
+                if(MessageBox.Show($"Hey! This Stationery is not the right size. Continue anyways?\nA Stationery should be 64x90 to show up properly.", "MeadowLand Maker", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) {
                     return;
                 }
             }
@@ -104,7 +104,6 @@ namespace MeadowLandLauncher {
             }
 
             var tempfile = Path.GetTempFileName();
-            MessageBox.Show(tempfile);
             File.WriteAllText(tempfile, packinfo.ToString());
 
             try {
@@ -115,11 +114,11 @@ namespace MeadowLandLauncher {
                     archive.CreateEntryFromFile(tempfile, "packinfo.json");
                 }
             } catch (ArgumentException err) {
-                StopGenerator(true, finalpath);
+                StopGenerator(true, finalpath, tempfile);
                 MessageBox.Show($"Something went wrong during ZIP generation. Is {PackNameBox.Text} a valid name for a ZIP file?\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             } catch (FileNotFoundException err) {
-                StopGenerator(true, finalpath);
+                StopGenerator(true, finalpath, tempfile);
                 MessageBox.Show($"A file needed for generation doesn't appear to exist.\n\nError details: {err.Message}", "MeadowLand Maker", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -130,14 +129,14 @@ namespace MeadowLandLauncher {
             StopGenerator();
         }
         
-        private void StopGenerator(bool DeleteZipData = false, string finalpath = "") {
+        private void StopGenerator(bool DeleteZipData = false, string finalpath = "", string temppath = "") {
             GenerateBtn.Enabled = true;
             GenerateBtn.Text = "Generate!";
             if(DeleteZipData == true) {
                 var mllappdata = "%appdata%\\MeadowLandMaker";
                 mllappdata = Environment.ExpandEnvironmentVariables(mllappdata);
                 try { File.Delete(finalpath); } catch { }
-                try { File.Delete($"{mllappdata}/packs/temp.json"); } catch { }
+                try { File.Delete(temppath); } catch { }
                 statusLabel.Text = $"ZIP data for {PackNameBox.Text} was deleted, probably due to an error.";
             }
         }

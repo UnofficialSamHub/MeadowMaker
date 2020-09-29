@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PackGen));
             this.label1 = new System.Windows.Forms.Label();
             this.SpriteSheetBox = new System.Windows.Forms.TextBox();
             this.StationeryBox = new System.Windows.Forms.TextBox();
@@ -257,6 +258,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SpriteSheetBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PackGen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resource Pack Creator";
