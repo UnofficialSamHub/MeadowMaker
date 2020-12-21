@@ -39,7 +39,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MeadowLand Maker (1.0.4)";
+            this.label1.Text = "MeadowLand Maker (1.0.5)";
             // 
             // PackBtn
             // 

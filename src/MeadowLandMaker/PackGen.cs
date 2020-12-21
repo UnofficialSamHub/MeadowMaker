@@ -125,8 +125,9 @@ namespace MeadowLandLauncher {
 
             statusLabel.Text = $"{PackNameBox.Text} was created!";
             File.Delete(tempfile);
-            Process.Start($@"{mllappdata}/packs");
             StopGenerator();
+            DialogResult woo = MessageBox.Show($"{PackNameBox.Text} was created! Would you like to open the Pack Folder now?", "MeadowLand Maker", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(woo == DialogResult.Yes) { Process.Start($@"{mllappdata}/packs"); }
         }
         
         private void StopGenerator(bool DeleteZipData = false, string finalpath = "", string temppath = "") {
